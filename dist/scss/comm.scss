@@ -1,0 +1,118 @@
+@charset "UFT-8";
+@import "variables", "mixin", "fonts", "reset";
+.inner {
+  padding: 0 70px;
+}
+#header {
+  .header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  ul {
+    display: flex;
+    li {
+      padding: 25px 50px;
+      a {
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+#main {
+  display: flex;
+  justify-content: center;
+  .cont-p {
+    #cont_po {
+      width: 100%;
+      position: sticky;
+      top: 0;
+    }
+    .curtain {
+      display: flex;
+      justify-content: center;
+      img {
+        display: block;
+        width: 25%;
+      }
+    }
+    #cont-titolo {
+      h2 {
+        font-size: 300px;
+        text-align: center;
+        line-height: 1.2;
+        &:nth-child(2),
+        &:nth-child(4) {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  .part1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    padding-top: 250px;
+    align-items: center;
+    .intro {
+      h2 {
+        font-size: 150px;
+        line-height: 1;
+      }
+    }
+    .intro-txt {
+      padding-left: 35%;
+      h2 {
+        font-size: 50px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    &::before {
+      content: "Douglas Tompkins";
+      position: absolute;
+      top: 55%;
+      left: 4%;
+      opacity: 0.5;
+      font-size: 70px;
+      color: red;
+      width: 25%;
+    }
+  }
+  .part2 {
+    padding-top: 150px;
+    .post {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .part3 {
+    padding-top: 150px;
+    position: relative;
+    .start-img {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 30%;
+      }
+    }
+    .start-history {
+      position: absolute;
+      top: 50%;
+      left: 32%;
+      right: 50%;
+      span {
+        font-size: 200px;
+      }
+    }
+  }
+}
