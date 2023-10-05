@@ -326,6 +326,18 @@ legend {
 #main .cont-p .curtain img {
   display: block;
   width: 25%;
+  animation: blinking 2.5s alternate infinite;
+}
+@keyframes blinking {
+  from {
+    box-shadow: 0 0 5px 5px rgb(255, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 5px 5px rgb(200, 0, 0);
+  }
+  to {
+    box-shadow: 0 0 5px 5px rgb(10, 10, 10);
+  }
 }
 #main .cont-p #cont-titolo h2 {
   font-size: 300px;
@@ -372,8 +384,22 @@ legend {
 #main .part2 {
   padding-top: 150px;
 }
-#main .part2 .post img {
+#main .part2 .innovation {
+  padding-top: 150px;
+}
+#main .part2 .innovation img {
   width: 100%;
+}
+#main .part2 .post .founder {
+  display: flex;
+  justify-content: space-between;
+}
+#main .part2 .post .founder .founder-img {
+  display: flex;
+  flex-direction: column;
+}
+#main .part2 .post .founder .cfmgs {
+  margin-right: 11%;
 }
 #main .part3 {
   padding-top: 150px;

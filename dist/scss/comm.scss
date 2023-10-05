@@ -37,6 +37,18 @@
       img {
         display: block;
         width: 25%;
+        animation: blinking 2.5s alternate infinite;
+      }
+      @keyframes blinking {
+        from {
+          box-shadow: 0 0 5px 5px rgb(255, 0, 0);
+        }
+        50% {
+          box-shadow: 0 0 5px 5px rgb(200, 0, 0);
+        }
+        to {
+          box-shadow: 0 0 5px 5px rgb(10, 10, 10);
+        }
       }
     }
     #cont-titolo {
@@ -89,9 +101,23 @@
   }
   .part2 {
     padding-top: 150px;
-    .post {
+    .innovation {
+      padding-top: 150px;
       img {
         width: 100%;
+      }
+    }
+    .post {
+      .founder {
+        display: flex;
+        justify-content: space-between;
+        .founder-img {
+          display: flex;
+          flex-direction: column;
+        }
+        .cfmgs {
+          margin-right: 11%;
+        }
       }
     }
   }
