@@ -59,6 +59,8 @@
     <script src="SOME_URL_FOR_JQUERY"></script>
     <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="dist/js/jquery.smooth-scroll.js"></script>
     <script src="dist/js/comm.js"></script>
   </head>
   <body>
@@ -72,19 +74,19 @@
           <nav>
             <ul>
               <li>
-                <a href="intro">intro</a>
+                <a href="#intro">intro</a>
               </li>
               <li>
-                <a href="1966">since"1966"</a>
+                <a href="#since1966">since"1966"</a>
               </li>
               <li>
-                <a href="1985">since"1985"</a>
+                <a href="#since1985">since"1985"</a>
               </li>
               <li>
-                <a href="1992">since"1992"</a>
+                <a href="#since1992">since"1992"</a>
               </li>
               <li>
-                <a href="2008">since"2008"</a>
+                <a href="#since2008">since"2008"</a>
               </li>
             </ul>
           </nav>
@@ -94,6 +96,46 @@
     <main id="main">
       <div class="page-wrap">
         <section class="cont-p">
+          <div class="runningtext-box-left">
+            <div class="running-text-left">
+              <h1>
+                The - North - Face - The - North - Face - The - North - Face
+                -The - North - Face -The - North - Face -&nbsp;
+              </h1>
+            </div>
+            <div class="running-text-left">
+              <h1>
+                The - North - Face - The - North - Face - The - North - Face -
+                The - North - Face - The - North - Face -&nbsp;
+              </h1>
+            </div>
+            <div class="running-text-left">
+              <h1>
+                The - North - Face - The - North - Face - The - North - Face -
+                The - North - Face - The - North - Face —&nbsp;
+              </h1>
+            </div>
+          </div>
+          <div class="runningtext-box-right">
+            <div class="running-text-right">
+              <h1>
+                The - North - Face - The - North - Face - The - North - Face
+                -The - North - Face -The - North - Face -&nbsp;
+              </h1>
+            </div>
+            <div class="running-text-right">
+              <h1>
+                The - North - Face - The - North - Face - The - North - Face -
+                The - North - Face - The - North - Face -&nbsp;
+              </h1>
+            </div>
+            <div class="running-text-right">
+              <h1>
+                The - North - Face - The - North - Face - The - North - Face -
+                The - North - Face - The - North - Face —&nbsp;
+              </h1>
+            </div>
+          </div>
           <div class="inner">
             <div id="cont_po" class="is-inview">
               <div id="img_poster" class="curtain">
@@ -124,9 +166,6 @@
           </div>
           <div class="intro-txt">
             <h2>
-              <!-- Exploration of people,
-                <br />
-                nature and the North Face -->
               사람,자연 그리고
               <br />
               노스페이스의 탐험
@@ -149,11 +188,15 @@
           <div class="post">
             <div class="inner">
               <div class="founder">
-                <div class="founder-img" data-aos="fade-right">
+                <div
+                  class="founder-img"
+                  data-aos="fade-right"
+                  data-aos-offset="200"
+                >
                   <img src="./images/Doug.png" alt="Doug" />
                   <img src="./images/Yvon.png" alt="Yvon" />
                 </div>
-                <div class="cfmgs" data-aos="fade-left">
+                <div class="cfmgs" data-aos="fade-left" data-aos-offset="200">
                   <img
                     src="./images/California_Mountaineering_Guide_Service.jpg"
                     alt=""
@@ -167,6 +210,7 @@
               data-aos-anchor-placement="top-bottom"
               date-aod-delai="700"
               data-aos-duration="1000"
+              data-aos-offset="200"
             >
               <img src="./images/nf_history_56.jpg" alt="" />
             </div>
@@ -184,6 +228,27 @@
             </div>
           </div>
         </section>
+        <section id="since1966" class="part4">
+          <div class="inner">
+            <div class="since1966">
+              <div class="header-1966">
+                <p>since</p>
+                <h2>1966</h2>
+                <p class="txt-1966">
+                  케네스는 더글라스에게 동업을 제의했고, 1966년 샌프란시스코
+                  노스 비치 지역에서 작은 아웃도어 장비용품점을 냈다. 가게
+                  이름은 "노스페이스 THE NORTH FACE"였다. 1960년대 히피 문화의
+                  중심지였던 샌프란시스코에 세운 "노스페이스"는 "자연으로
+                  돌아가는"히피 문화의 최전선에 있었다.
+                </p>
+              </div>
+              <div class="img-1966" data-aos="fade-left">
+                <img src="./images/1966-northface.jpg" alt="1966northface" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="since1985" class="part5"></section>
       </div>
     </main>
     <script>
