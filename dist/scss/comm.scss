@@ -1,7 +1,7 @@
 @charset "UFT-8";
 @import "variables", "mixin", "fonts", "reset";
 .inner {
-  padding: 0 70px;
+  padding: 0 200px;
 }
 #header {
   .header-wrap {
@@ -95,20 +95,10 @@
     display: flex;
     justify-content: center;
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: block;
-      width: 436px;
-      height: 439px;
-      animation: blinking 2.5s alternate infinite;
-      transform: translate(-50%, -50%);
-    }
     img {
       display: block;
       width: 25%;
+      animation: blinking 2.5s alternate infinite;
     }
     @keyframes blinking {
       from {
@@ -140,33 +130,33 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 0 70px;
+    padding: 0 200px;
     padding-top: 250px;
     align-items: center;
     .intro {
       h2 {
-        font-size: 150px;
+        font-size: 120px;
         line-height: 1;
       }
     }
     .intro-txt {
       padding-left: 35%;
       h2 {
-        font-size: 50px;
+        font-size: 40px;
         letter-spacing: 3px;
         margin-bottom: 20px;
       }
       p {
-        font-size: 20px;
+        font-size: 17px;
       }
     }
     &::before {
       content: "Douglas Tompkins";
       position: absolute;
       top: 55%;
-      left: 4%;
+      left: 10.7%;
       opacity: 0.5;
-      font-size: 70px;
+      font-size: 60px;
       color: red;
       width: 25%;
     }
@@ -215,37 +205,176 @@
     }
   }
   .part4 {
-    padding-top: 290px;
-    .since1966 {
+    .history {
+      min-height: 100vh;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      padding: 350px 0;
     }
-    .header-1966 {
-      line-height: 1.3;
-      p {
-        font-size: 50px;
+    .timeline {
+      width: 80%;
+      height: auto;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      &:nth-child(1) {
+        margin-bottom: -40%;
+      }
+      ul {
+        list-style: none;
+        li {
+          padding: 20px;
+          color: white;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    #dna {
+      margin-top: -5%;
+    }
+    .timeline-content {
+      img {
+        max-width: 100%;
+        display: block;
       }
       h2 {
-        font-size: 90px;
+        font-size: 35px;
+        margin-top: -8%;
         color: red;
       }
-      .txt-1966 {
-        font-size: 20px;
-        width: 566px;
-        margin-top: 10%;
+      p {
+        font-size: 16px;
+        line-height: 30px;
+        margin-top: 10px;
       }
     }
-    .img-1966 {
-      display: flex;
-      justify-content: flex-end;
-      img {
-        display: block;
-        width: 80%;
-        z-index: 1;
+    @media only screen and (min-width: 768px) {
+      .timeline:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 79%;
+        background-color: #d8d8d8;
+      }
+      .timeline ul li {
+        width: 50%;
+        position: relative;
+        margin-bottom: 50px;
+      }
+      .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+      }
+      .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+      }
+      .timeline ul li::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: #d8d8d8;
+        top: 0px;
+      }
+      .timeline ul li:nth-child(odd)::before {
+        transform: translate(50%, -50%);
+        right: -30px;
+      }
+      .timeline ul li:nth-child(even)::before {
+        transform: translate(-50%, -50%);
+        left: -30px;
+      }
+      .timeline-content .date {
+        position: absolute;
+        top: -30px;
+      }
+      .timeline ul li:hover::before {
+        background-color: red;
       }
     }
   }
   .part5 {
-    padding-top: 150px;
+    padding-top: 30%;
+    position: relative;
+    .cycle-main-logo {
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+      position: relative;
+      img {
+        display: block;
+        width: 40%;
+        opacity: 0.8;
+      }
+    }
+    .mini-cycle {
+      position: absolute;
+      bottom: 10px;
+      left: 41%;
+      animation: rotate 20s linear infinite;
+    }
+    .big-cycle {
+      position: absolute;
+      bottom: -8%;
+      left: 36%;
+      animation: rotate 20s linear infinite;
+      animation-direction: reverse;
+      z-index: 2;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .end {
+    padding-top: 200px;
+    .inner {
+      padding: 0 200px;
+    }
+    .txt-end {
+      font-size: 100px;
+      letter-spacing: 3px;
+      a {
+        &:hover {
+          color: red;
+          transition: color 0.5s ease;
+        }
+      }
+    }
+    .link {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -32.5%;
+      font-size: 34px;
+      a {
+        &:hover {
+          color: red;
+          transition: color 0.5s ease;
+        }
+      }
+    }
+    .copy {
+      padding: 25px 0;
+      font-size: 14px;
+    }
   }
 }
