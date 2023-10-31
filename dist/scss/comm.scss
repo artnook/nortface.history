@@ -36,7 +36,7 @@
       top: 31%;
       overflow: hidden;
       -webkit-transform: rotate(-8deg);
-      h1 {
+      div {
         font-size: 150px;
         color: transparent;
         -webkit-text-stroke: 1px red;
@@ -54,7 +54,7 @@
       overflow: hidden;
       -webkit-transform: rotate(8deg);
       z-index: 1;
-      h1 {
+      div {
         font-size: 150px;
         color: transparent;
         // text-shadow: -1px 0px white, 0px 1px white, 1px 0px white,

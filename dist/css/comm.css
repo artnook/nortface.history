@@ -326,7 +326,7 @@ legend {
   overflow: hidden;
   -webkit-transform: rotate(-8deg);
 }
-#main .cont-p .runningtext-box-left h1 {
+#main .cont-p .runningtext-box-left div {
   font-size: 150px;
   color: transparent;
   -webkit-text-stroke: 1px red;
@@ -344,7 +344,7 @@ legend {
   -webkit-transform: rotate(8deg);
   z-index: 1;
 }
-#main .cont-p .runningtext-box-right h1 {
+#main .cont-p .runningtext-box-right div {
   font-size: 150px;
   color: transparent;
   -webkit-text-stroke: 1px white;
